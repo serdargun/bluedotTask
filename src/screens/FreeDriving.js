@@ -97,7 +97,8 @@ class FreeDriving extends React.Component {
   onButtonPress = () => {
     if (this.state.active) {
       getData('totalDistance').then(data => {
-        const val = parseFloat(data) + this.state.distanceTravelled;
+        const prevData = isNaN(data) ? 0 : parseFloat(data);
+        const val = prevData + this.state.distanceTravelled;
         storeData('totalDistance', val.toString());
       });
       this.setState({
