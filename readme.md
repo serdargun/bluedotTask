@@ -7,3 +7,4 @@ A basic map tracking app 🚀
 - Two screens: `Free Driving` and `Payment`
 - When Free Driving mode is open, it calculates how many kilometers have been driven.
 - It also calculates when in background mode.
+- It uses `haversine formula` to calculate distance.
